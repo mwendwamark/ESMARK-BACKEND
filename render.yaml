@@ -1,6 +1,6 @@
 databases: 
  - name: esmark_backend
-   database: esmark_backend
+   database: esmark_backend_database
    user: esmark_backend
    plan: free 
 
