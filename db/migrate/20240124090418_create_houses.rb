@@ -1,7 +1,7 @@
 class CreateHouses < ActiveRecord::Migration[7.1]
   def change
     create_table :houses do |t|
-      t.string :type
+      t.string :house_type
       t.string :floor
       t.integer :price
       t.string :house_number
@@ -16,6 +16,8 @@ class CreateHouses < ActiveRecord::Migration[7.1]
       t.boolean :has_bedroom
       t.boolean :vacant
 
+      # t.belongs_to :house_owner
+      # t.has_many :tenants
       t.timestamps
     end
   end

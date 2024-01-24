@@ -1,6 +1,7 @@
 class CreateTenants < ActiveRecord::Migration[7.1]
   def change
     create_table :tenants do |t|
+      t.string :role, default:"tenant"
       t.string :name
       t.string :house_number
       t.string :house_type

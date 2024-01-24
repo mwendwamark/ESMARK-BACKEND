@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_24_090418) do
   enable_extension "plpgsql"
 
   create_table "houses", force: :cascade do |t|
-    t.string "type"
+    t.string "house_type"
     t.string "floor"
     t.integer "price"
     t.string "house_number"
@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_24_090418) do
   end
 
   create_table "tenants", force: :cascade do |t|
+    t.string "role", default: "tenant"
     t.string "name"
     t.string "house_number"
     t.string "house_type"

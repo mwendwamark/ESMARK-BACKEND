@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :houses
+  resources :houses, only: [:index, :show, :create, :update, :destroy]
   resources :tenants, only: [:index, :show, :create, :update, :destroy]
   get "/me", to: "tenants#show"
   post "/signup", to: "tenants#create"
